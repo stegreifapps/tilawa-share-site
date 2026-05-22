@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["339QG8NNU6.com.stegreif.tilawa.ios"],
+        "components": [
+          {
+            "/": "/share/*"
+          }
+        ]
+      }
+    ]
+  }
+}
