@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tilawa Share</title>
+    <style>
+      :root {
+        --bg: #07171d;
+        --panel: rgba(255, 255, 255, 0.06);
+        --panel-strong: rgba(255, 255, 255, 0.08);
+        --panel-border: rgba(255, 255, 255, 0.1);
+        --text: #f7f2e7;
+        --muted: rgba(247, 242, 231, 0.72);
+        --accent: #63e1cb;
+        --accent-dark: #0f4b53;
+        --gold: #e5d1a0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top, rgba(99, 225, 203, 0.2), transparent 30%),
+          linear-gradient(180deg, #0a2027 0%, var(--bg) 100%);
+        padding: 24px;
+      }
+
+      .wrap {
+        width: min(840px, 100%);
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 32px;
+        border-radius: 28px;
+        background: var(--panel);
+        border: 1px solid var(--panel-border);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-size: 0.8rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-weight: 600;
+      }
+
+      .subtitle {
+        margin-top: 10px;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 26px;
+      }
+
+      .card {
+        padding: 18px;
+        border-radius: 20px;
+        background: var(--panel-strong);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--muted);
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .value {
+        color: var(--text);
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
+      .badge-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        min-height: 36px;
+        padding: 0 14px;
+        border-radius: 999px;
+        background: rgba(15, 75, 83, 0.75);
+        color: var(--gold);
+        font-size: 0.92rem;
+        font-weight: 700;
+      }
+
+      .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 0 20px;
+        border-radius: 18px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .button-primary {
+        background: linear-gradient(135deg, var(--accent) 0%, #3fa99a 100%);
+        color: #07353a;
+      }
+
+      .button-secondary {
+        color: var(--text);
+        border: 1px solid var(--panel-border);
+      }
+
+      .footer-note {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <p class="eyebrow" id="share-type">Tilawa Share</p>
+        <h1 id="title">Geteilter Inhalt</h1>
+        <p class="subtitle" id="subtitle">
+          Diese Seite zeigt geteilte Ayat, Audio-Bereiche oder Lernpläne aus Tilawa.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <span class="label">Sura</span>
+            <span class="value" id="surah">-</span>
+          </div>
+          <div class="card">
+            <span class="label">Bereich</span>
+            <span class="value" id="range">-</span>
+          </div>
+          <div class="card">
+            <span class="label">Modus</span>
+            <span class="value" id="mode">-</span>
+          </div>
+          <div class="card">
+            <span class="label">Plan</span>
+            <span class="value" id="plan">Kein Lernplan</span>
+          </div>
+        </div>
+
+        <div class="badge-row" id="badge-row"></div>
+
+        <div class="actions">
+          <a class="button button-primary" id="open-app-link" href="#">In Tilawa öffnen</a>
+          <a class="button button-secondary" href="/">Zur Startseite</a>
+        </div>
+
+        <p class="footer-note">
+          Wenn Tilawa auf deinem iPhone installiert ist und Universal Links aktiv sind,
+          öffnet dieser Link direkt die App.
+        </p>
+      </section>
+    </main>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const path = window.location.pathname;
+
+      const shareType = path.includes("/plan")
+        ? "plan"
+        : path.includes("/audio")
+          ? "audio"
+          : "reading";
+
+      const surah = params.get("surah") || "-";
+      const from = params.get("from") || "-";
+      const to = params.get("to") || from;
+      const daily = params.get("daily");
+      const repeats = params.get("repeats");
+      const mode = params.get("mode") || defaultModeForType(shareType);
+
+      function defaultModeForType(type) {
+        if (type === "audio") return "listen";
+        if (type === "plan") return "repeat";
+        return "read";
+      }
+
+      function modeLabel(value) {
+        switch (value) {
+          case "repeat": return "Nachsprechen";
+          case "read": return "Lesen";
+          case "listen": return "Zuhören";
+          default: return value || "-";
+        }
+      }
+
+      function shareLabel(type) {
+        switch (type) {
+          case "audio": return "Geteilter Audio-Inhalt";
+          case "plan": return "Geteilter Lernplan";
+          default: return "Geteilter Lesebereich";
+        }
+      }
+
+      function shareSubtitle(type) {
+        switch (type) {
+          case "audio":
+            return "Dieser Bereich führt direkt in den Audio-Modus von Tilawa.";
+          case "plan":
+            return "Dieser Lernplan kann direkt in Tilawa übernommen und gestartet werden.";
+          default:
+            return "Dieser Bereich kann direkt in Tilawa gelesen oder weiter bearbeitet werden.";
+        }
+      }
+
+      document.getElementById("share-type").textContent = shareLabel(shareType);
+      document.getElementById("title").textContent = `Sura ${surah}`;
+      document.getElementById("subtitle").textContent = shareSubtitle(shareType);
+      document.getElementById("surah").textContent = `Sura ${surah}`;
+      document.getElementById("range").textContent = from === to ? `Ayah ${from}` : `Ayah ${from} bis ${to}`;
+      document.getElementById("mode").textContent = modeLabel(mode);
+      document.getElementById("plan").textContent = daily && repeats
+        ? `${daily} Ayat/Tag · ${repeats} Wiederholungen`
+        : "Kein Lernplan";
+
+      const badges = [];
+      if (shareType === "plan") badges.push("Lernplan");
+      if (daily) badges.push(`${daily} Ayat/Tag`);
+      if (repeats) badges.push(`${repeats} Wiederholungen`);
+      badges.push(modeLabel(mode));
+
+      const badgeRow = document.getElementById("badge-row");
+      badges.forEach((text) => {
+        const span = document.createElement("span");
+        span.className = "badge";
+        span.textContent = text;
+        badgeRow.appendChild(span);
+      });
+
+      document.getElementById("open-app-link").href = window.location.href;
+    </script>
+  </body>
+  </html>
