@@ -73,4 +73,6 @@ badges.forEach((text) => {
   badgeRow.appendChild(span);
 });
 
-document.getElementById("open-app-link").href = window.location.href;
+const appURL = new URL(window.location.href);
+appURL.protocol = "tilawa:";
+document.getElementById("open-app-link").href = appURL.toString();
