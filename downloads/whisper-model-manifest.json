@@ -2,7 +2,7 @@
   "version": 1,
   "name": "Whisper Tarteel Arabic Quran",
   "entryFolder": "whisper-tarteel-v1",
-  "downloadURL": "https://www.gettilawa.com/downloads/whisper-tarteel-v1.zip",
+  "downloadURL": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/whisper-tarteel-v1.zip",
   "sizeBytes": 266392620,
   "sizeMB": 254,
   "sha256": "3eed354991fce19b0bc29eedbe2e12b0d33f8d947b469d449581455c7b4a3011"
