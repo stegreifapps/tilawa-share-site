@@ -2,8 +2,173 @@
   "version": 1,
   "name": "Whisper Tarteel Arabic Quran",
   "entryFolder": "whisper-tarteel-v1",
-  "downloadURL": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/whisper-tarteel-v1.zip",
-  "sizeBytes": 266392620,
-  "sizeMB": 254,
-  "sha256": "3eed354991fce19b0bc29eedbe2e12b0d33f8d947b469d449581455c7b4a3011"
+  "sizeBytes": 296740085,
+  "sizeMB": 283,
+  "files": [
+    {
+      "path": "WhisperDecoder.mlpackage/Data/com.apple.CoreML/model.mlmodel",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperDecoder.mlpackage__Data__com.apple.CoreML__model.mlmodel",
+      "sizeBytes": 126424
+    },
+    {
+      "path": "WhisperDecoder.mlpackage/Data/com.apple.CoreML/weights/weight.bin",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperDecoder.mlpackage__Data__com.apple.CoreML__weights__weight.bin",
+      "sizeBytes": 104121074
+    },
+    {
+      "path": "WhisperDecoder.mlpackage/Manifest.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperDecoder.mlpackage__Manifest.json",
+      "sizeBytes": 617
+    },
+    {
+      "path": "WhisperEncoder.mlpackage/Data/com.apple.CoreML/model.mlmodel",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperEncoder.mlpackage__Data__com.apple.CoreML__model.mlmodel",
+      "sizeBytes": 63977
+    },
+    {
+      "path": "WhisperEncoder.mlpackage/Data/com.apple.CoreML/weights/weight.bin",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperEncoder.mlpackage__Data__com.apple.CoreML__weights__weight.bin",
+      "sizeBytes": 41188544
+    },
+    {
+      "path": "WhisperEncoder.mlpackage/Manifest.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperEncoder.mlpackage__Manifest.json",
+      "sizeBytes": 617
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/AudioEncoder.mlcomputeplan.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__AudioEncoder.mlcomputeplan.json",
+      "sizeBytes": 292964
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/AudioEncoder.mlmodelc/analytics/coremldata.bin",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__AudioEncoder.mlmodelc__analytics__coremldata.bin",
+      "sizeBytes": 243
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/AudioEncoder.mlmodelc/coremldata.bin",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__AudioEncoder.mlmodelc__coremldata.bin",
+      "sizeBytes": 409
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/AudioEncoder.mlmodelc/metadata.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__AudioEncoder.mlmodelc__metadata.json",
+      "sizeBytes": 1912
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/AudioEncoder.mlmodelc/model.mil",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__AudioEncoder.mlmodelc__model.mil",
+      "sizeBytes": 774151
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/AudioEncoder.mlmodelc/weights/weight.bin",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__AudioEncoder.mlmodelc__weights__weight.bin",
+      "sizeBytes": 41189632
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/MelSpectrogram.mlcomputeplan.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__MelSpectrogram.mlcomputeplan.json",
+      "sizeBytes": 3999
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/MelSpectrogram.mlmodelc/analytics/coremldata.bin",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__MelSpectrogram.mlmodelc__analytics__coremldata.bin",
+      "sizeBytes": 243
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/MelSpectrogram.mlmodelc/coremldata.bin",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__MelSpectrogram.mlmodelc__coremldata.bin",
+      "sizeBytes": 390
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/MelSpectrogram.mlmodelc/metadata.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__MelSpectrogram.mlmodelc__metadata.json",
+      "sizeBytes": 1948
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/MelSpectrogram.mlmodelc/model.mil",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__MelSpectrogram.mlmodelc__model.mil",
+      "sizeBytes": 10133
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/MelSpectrogram.mlmodelc/weights/weight.bin",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__MelSpectrogram.mlmodelc__weights__weight.bin",
+      "sizeBytes": 354080
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/TextDecoder.mlcomputeplan.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__TextDecoder.mlcomputeplan.json",
+      "sizeBytes": 48031
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/TextDecoder.mlmodelc/analytics/coremldata.bin",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__TextDecoder.mlmodelc__analytics__coremldata.bin",
+      "sizeBytes": 243
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/TextDecoder.mlmodelc/coremldata.bin",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__TextDecoder.mlmodelc__coremldata.bin",
+      "sizeBytes": 655
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/TextDecoder.mlmodelc/metadata.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__TextDecoder.mlmodelc__metadata.json",
+      "sizeBytes": 4486
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/TextDecoder.mlmodelc/model.mil",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__TextDecoder.mlmodelc__model.mil",
+      "sizeBytes": 178608
+    },
+    {
+      "path": "WhisperTarteel/tarteel-ai_whisper-base-ar-quran/TextDecoder.mlmodelc/weights/weight.bin",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tarteel-ai_whisper-base-ar-quran__TextDecoder.mlmodelc__weights__weight.bin",
+      "sizeBytes": 104122162
+    },
+    {
+      "path": "WhisperTarteel/tokenizer/added_tokens.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tokenizer__added_tokens.json",
+      "sizeBytes": 2108
+    },
+    {
+      "path": "WhisperTarteel/tokenizer/config.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tokenizer__config.json",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "WhisperTarteel/tokenizer/merges.txt",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tokenizer__merges.txt",
+      "sizeBytes": 493864
+    },
+    {
+      "path": "WhisperTarteel/tokenizer/normalizer.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tokenizer__normalizer.json",
+      "sizeBytes": 52666
+    },
+    {
+      "path": "WhisperTarteel/tokenizer/preprocessor_config.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tokenizer__preprocessor_config.json",
+      "sizeBytes": 184990
+    },
+    {
+      "path": "WhisperTarteel/tokenizer/special_tokens_map.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tokenizer__special_tokens_map.json",
+      "sizeBytes": 2064
+    },
+    {
+      "path": "WhisperTarteel/tokenizer/tokenizer_config.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tokenizer__tokenizer_config.json",
+      "sizeBytes": 827
+    },
+    {
+      "path": "WhisperTarteel/tokenizer/tokenizer.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tokenizer__tokenizer.json",
+      "sizeBytes": 2480466
+    },
+    {
+      "path": "WhisperTarteel/tokenizer/vocab.json",
+      "url": "https://github.com/stegreifapps/tilawa-share-site/releases/download/whisper-model-v1/WhisperTarteel__tokenizer__vocab.json",
+      "sizeBytes": 1036558
+    }
+  ]
 }
