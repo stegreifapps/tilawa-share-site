@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tilawa Support</title>
+    <style>
+      :root {
+        --bg: #07171d;
+        --panel: rgba(255, 255, 255, 0.06);
+        --panel-strong: rgba(255, 255, 255, 0.08);
+        --panel-border: rgba(255, 255, 255, 0.1);
+        --text: #f7f2e7;
+        --muted: rgba(247, 242, 231, 0.72);
+        --accent: #63e1cb;
+        --accent-dark: #0f4b53;
+        --gold: #e5d1a0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top, rgba(99, 225, 203, 0.16), transparent 28%),
+          linear-gradient(180deg, #0a2027 0%, var(--bg) 100%);
+        padding: 24px;
+      }
+
+      .wrap {
+        width: min(860px, 100%);
+        margin: 0 auto;
+      }
+
+      .hero,
+      .section {
+        padding: 32px;
+        border-radius: 28px;
+        background: var(--panel);
+        border: 1px solid var(--panel-border);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+      }
+
+      .section {
+        margin-top: 18px;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-size: 0.8rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3.2rem);
+      }
+
+      h2 {
+        font-size: 1.35rem;
+      }
+
+      p,
+      li {
+        line-height: 1.65;
+        color: var(--muted);
+      }
+
+      .lead {
+        margin-top: 12px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 24px;
+      }
+
+      .card {
+        padding: 18px;
+        border-radius: 20px;
+        background: var(--panel-strong);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--muted);
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .value,
+      a {
+        color: var(--text);
+      }
+
+      .value {
+        font-size: 1.02rem;
+        font-weight: 700;
+      }
+
+      a {
+        text-decoration-color: rgba(99, 225, 203, 0.55);
+        text-underline-offset: 3px;
+      }
+
+      .button-row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 24px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 20px;
+        border-radius: 18px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .button-primary {
+        background: linear-gradient(135deg, var(--accent) 0%, #3fa99a 100%);
+        color: #07353a;
+      }
+
+      .button-secondary {
+        border: 1px solid var(--panel-border);
+      }
+
+      ul {
+        margin: 16px 0 0;
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <p class="eyebrow">Tilawa Support</p>
+        <h1>Need help with Tilawa?</h1>
+        <p class="lead">
+          For support, bug reports, feature feedback, or TestFlight questions,
+          you can contact us directly. We especially welcome feedback about reading,
+          audio playback, hifz sessions, speech recognition, and sharing links.
+        </p>
+        <div class="grid">
+          <article class="card">
+            <span class="label">Support Email</span>
+            <div class="value"><a href="mailto:support@gettilawa.com">support@gettilawa.com</a></div>
+          </article>
+          <article class="card">
+            <span class="label">Feedback</span>
+            <div class="value">Please include device, iOS version, and a short description.</div>
+          </article>
+          <article class="card">
+            <span class="label">App</span>
+            <div class="value">Tilawa for iPhone and iPad</div>
+          </article>
+        </div>
+        <div class="button-row">
+          <a class="button button-primary" href="mailto:support@gettilawa.com">Email Support</a>
+          <a class="button button-secondary" href="/">Back to Tilawa</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Helpful information to send with your message</h2>
+        <ul>
+          <li>Your device model and iOS version</li>
+          <li>The Tilawa build or TestFlight version you are using</li>
+          <li>What you expected to happen and what happened instead</li>
+          <li>If possible, screenshots or a short screen recording</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
